@@ -4,10 +4,16 @@
  * Data is stored permanently in data/zoeblossom.db on the server disk.
  */
 
+const fs = require('fs');
 const path = require('path');
 const Database = require('better-sqlite3');
 
-const dbPath = path.join(__dirname, 'data', 'zoeblossom.db');
+const dataDir = path.join(__dirname, 'data');
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
+const dbPath = path.join(dataDir, 'zoeblossom.db');
 const db = new Database(dbPath);
 
 db.pragma('journal_mode = WAL');
