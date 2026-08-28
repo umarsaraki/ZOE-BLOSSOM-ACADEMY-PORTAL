@@ -1,0 +1,12 @@
+APP_PORT=3000
+NODE_ENV=production
+SESSION_SECRET=change_this_to_a_long_random_string
+
+ADMIN_REG_NO=ADMIN-001
+ADMIN_PASSWORD=ChangeMe123
+
+# Flutterwave (from https://dashboard.flutterwave.com/settings/apis)
+FLW_SECRET_KEY=FLWSECK-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-X
+# FLW_SECRET_HASH is a random string YOU invent — put the same value in
+# Flutterwave's dashboard under Settings > Webhooks > Secret Hash
+FLW_SECRET_HASH=your_own_random_webhook_secret_string
